@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { PROPERTIES, TESTIMONIALS } from '../constants';
 import PropertyCard from '../components/PropertyCard';
 import TestimonialCard from '../components/TestimonialCard';
+import MetaTagManager from '../components/MetaTagManager';
 
 const Home: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,6 +46,11 @@ const Home: React.FC = () => {
 
   return (
     <>
+      <MetaTagManager 
+        title="Flats for Sale & Rent in Indirapuram, Ghaziabad | 9 Property Wala"
+        description="Find your dream home with 9 Property Wala, the top property dealer in Indirapuram. We specialize in buying, selling, and renting 2, 3, & 4 BHK flats in Ghaziabad, Noida, and Delhi NCR."
+      />
+
       {/* Hero Section */}
       <section className="h-[calc(100vh-112px)] min-h-[450px] relative flex items-center justify-center text-white text-center bg-cover bg-center" style={{ backgroundImage: `url('https://cdn.glitch.global/6860b843-f780-4440-925e-8b3d8e29b369/background1.jpeg?v=1746597212978')` }}>
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>

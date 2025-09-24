@@ -1,5 +1,5 @@
-
 import React from 'react';
+import MetaTagManager from '../components/MetaTagManager';
 
 const Contact: React.FC = () => {
     const openingHours = [
@@ -14,6 +14,10 @@ const Contact: React.FC = () => {
 
   return (
     <>
+      <MetaTagManager 
+        title="Contact 9 Property Wala - Real Estate Agent in Indirapuram"
+        description="Get in touch with 9 Property Wala for all your real estate needs in Indirapuram, Ghaziabad. Visit our office, call us, or send an email today."
+      />
       <section className="bg-gray-100 py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-heading text-4xl md:text-5xl font-bold text-dark">Get In Touch</h1>
@@ -82,7 +86,7 @@ const Contact: React.FC = () => {
               <h2 className="font-heading text-3xl font-bold text-dark text-center mb-8">Find Us On Map</h2>
               <div className="h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-lg border-4 border-white">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.8592940772924!2d77.35794560000001!3d28.6339789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce57955b2540f%3A0xa9465015daa4597b!2s9%20Property%20Wala%20%7C%20Flats%20in%20Indirapuram%20%7C%20Property%20Dealer%20Indirapuram%20Real%20Estate%20Agent!5e0!3m2!1sen!2sin!4v1746598990010!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!m12!1m3!1d3501.8592940772924!2d77.35794560000001!3d28.6339789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce57955b2540f%3A0xa9465015daa4597b!2s9%20Property%20Wala%20%7C%20Flats%20in%20Indirapuram%20%7C%20Property%20Dealer%20Indirapuram%20Real%20Estate%20Agent!5e0!3m2!1sen!2sin!4v1746598990010!5m2!1sen!2sin"
                   className="w-full h-full"
                   style={{ border: 0 }}
                   allowFullScreen={true}
