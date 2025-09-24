@@ -1,5 +1,5 @@
 
-import { PropertyStatus, type Property, type Testimonial, type NavLinkItem } from './types';
+import { PropertyStatus, type Property, type Testimonial, type NavLinkItem, type ServiceArea } from './types';
 
 export const NAV_LINKS: NavLinkItem[] = [
   { path: '/', name: 'Home' },
@@ -106,7 +106,7 @@ export const TESTIMONIALS: Testimonial[] = [
     id: 1,
     name: 'Raman Kothari',
     location: 'South Delhi',
-    text: "The best part about working with Sonu Ji was that he was always more focused on answering my questions, giving me good advice, and finding homes that met my needs.",
+    text: "The best part about working with Anirudh Ji was that he was always more focused on answering my questions, giving me good advice, and finding homes that met my needs.",
     rating: 5,
     image: 'https://cdn.glitch.global/6860b843-f780-4440-925e-8b3d8e29b369/c395d9e5-a6d4-47b0-be95-0cb2445c6d4a.image.png?v=1746871942178',
   },
@@ -114,7 +114,7 @@ export const TESTIMONIALS: Testimonial[] = [
     id: 2,
     name: 'CA Joginder Kumar Mittal',
     location: 'South Delhi',
-    text: "I recently found the need and desire to purchase a larger home. I spoke to a variety of different realtors who showed me a variety of homes until I found Sonu Ji, who helped me find what I was truly looking for.",
+    text: "I recently found the need and desire to purchase a larger home. I spoke to a variety of different realtors that showed me a variety of homes until I found Anirudh Ji.",
     rating: 4,
     image: 'https://cdn.glitch.global/6860b843-f780-4440-925e-8b3d8e29b369/cd23a99f-8e93-4597-91c3-5afb0aaea810.image.png?v=1746872091126',
   },
@@ -122,7 +122,7 @@ export const TESTIMONIALS: Testimonial[] = [
     id: 3,
     name: 'Prakhar Gupta',
     location: 'South Delhi',
-    text: "We can't speak highly enough of our experience with Sonu Ji. We were first-time homebuyers with very little knowledge about how to find the right place.",
+    text: "We can't speak highly enough of our experience with Anirudh Ji. We were first-time homebuyers with very little knowledge about how to find the right place.",
     rating: 4.5,
     image: 'https://cdn.glitch.global/6860b843-f780-4440-925e-8b3d8e29b369/02ce566a-2118-4153-a738-693fedfa3870.image.png?v=1746872699445',
   },
@@ -159,3 +159,17 @@ export const TESTIMONIALS: Testimonial[] = [
     image: 'https://cdn.glitch.global/6860b843-f780-4440-925e-8b3d8e29b369/dcd4d3f6-fe51-4d93-8b1f-0c6ed71d9af7.WhatsApp%20Image%202025-05-10%20at%2015.39.45_a7452d47.jpg?v=1746872213770',
   },
 ];
+
+const locations = [
+  'Indirapuram', 'Ghaziabad', 'Vaishali', 'Vasundhara', 'Noida', 'Noida 76', 
+  'Noida 62', 'Noida 128', 'Greater Noida', 'Delhi', 'Delhi NCR', 'Uttar Pradesh'
+];
+const propertyTypes = ['2 BHK', '3 BHK', '4 BHK'];
+const actions = ['for rent', 'for buy', 'for sale'];
+
+export const SERVICE_AREAS: ServiceArea[] = locations.map(location => ({
+  name: location,
+  subLinks: propertyTypes.flatMap(type =>
+    actions.map(action => `${type} ${action} in ${location}`)
+  )
+}));

@@ -29,3 +29,8 @@ export interface NavLinkItem {
   path: string;
   name: string;
 }
+
+export interface ServiceArea {
+  name: string;
+  subLinks: string[];
+}

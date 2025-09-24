@@ -1,6 +1,38 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { SERVICE_AREAS } from '../constants';
+import type { ServiceArea } from '../types';
+
+const AccordionItem: React.FC<{ area: ServiceArea }> = ({ area }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex justify-between items-center w-full text-left font-medium text-sm text-light-dark hover:text-white transition-colors py-1"
+        aria-expanded={isOpen}
+      >
+        <span>{area.name}</span>
+        <i className={`fas fa-chevron-down transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}></i>
+      </button>
+      <div
+        className={`grid overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+      >
+        <div className="overflow-hidden">
+           <ul className="pl-4 pt-2 pb-1 space-y-1">
+            {area.subLinks.map((linkText, index) => (
+              <li key={index}>
+                <Link to="/properties" className="text-xs text-light-dark hover:text-white hover:pl-1 transition-all duration-300 block">{linkText}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -8,7 +40,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-dark text-light-dark pt-16 pb-6">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           {/* About Column */}
           <div className="space-y-4">
             <h4 className="font-heading text-xl font-semibold text-white">9 Property Wala</h4>
@@ -30,6 +62,16 @@ const Footer: React.FC = () => {
               <li><Link to="/about" className="hover:text-white hover:pl-2 transition-all duration-300">About Us</Link></li>
               <li><Link to="/contact" className="hover:text-white hover:pl-2 transition-all duration-300">Contact Us</Link></li>
             </ul>
+          </div>
+
+          {/* Areas We Serve Column */}
+          <div className="space-y-4">
+            <h4 className="font-heading text-xl font-semibold text-white">Areas We Serve</h4>
+            <div className="space-y-1">
+              {SERVICE_AREAS.map(area => (
+                <AccordionItem key={area.name} area={area} />
+              ))}
+            </div>
           </div>
 
           {/* Contact Info Column */}
