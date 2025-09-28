@@ -67,7 +67,7 @@ export const PROPERTIES: Property[] = [
   },
   {
     id: 4,
-    title: 'RG Mirage 4 BHK + Servant',
+    title: 'RG Mirage 4 BHK + Servant room',
     price: '₹ 3,41,40,000',
     description: 'exclusive 4BHK project by RG Group in Noida sector 120 and the Experience modern living with world-class amenities designed for a refined lifestyle.',
     beds: 4,
