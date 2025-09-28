@@ -58,7 +58,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
         </Link>
         <p className="text-lg font-semibold text-primary mb-3">{property.price}</p>
         <p className="text-gray-600 text-sm mb-4 flex-grow">{property.description.substring(0, 100)}...</p>
-        <div className="flex justify-between items-center text-sm text-gray-700 pt-3 border-t border-gray-100">
+        <div className="flex flex-col items-start gap-3 text-sm text-gray-700 pt-3 border-t border-gray-100 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-2"><i className="fas fa-bed text-primary"></i>{property.beds} Beds</span>
             <span className="flex items-center gap-2"><i className="fas fa-ruler-combined text-primary"></i>{property.area} sqft</span>
