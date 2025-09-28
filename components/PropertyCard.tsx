@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { type Property, PropertyStatus } from '../types';
 
 interface PropertyCardProps {
@@ -24,7 +24,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
     const shareData = {
       title: `9 Property Wala: ${property.title}`,
       text: `Check out this property: ${property.title}. Price: ${property.price}`,
-      url: window.location.href,
+      url: `${window.location.origin}/#/property/${property.id}`,
     };
     try {
       if (navigator.share) {
@@ -45,15 +45,19 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
       <div className="relative overflow-hidden h-56">
-        <img src={property.image} alt={property.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <Link to={`/property/${property.id}`}>
+            <img src={property.image} alt={property.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        </Link>
         <span className={`absolute top-4 left-4 text-white text-xs font-bold px-3 py-1 rounded-md ${getStatusColor()}`}>
           {property.status}
         </span>
       </div>
       <div className="p-5 flex flex-col flex-grow">
-        <h3 className="font-heading text-xl font-bold text-dark mb-2 truncate">{property.title}</h3>
+        <Link to={`/property/${property.id}`} className="hover:text-primary transition-colors">
+            <h3 className="font-heading text-xl font-bold text-dark mb-2 truncate">{property.title}</h3>
+        </Link>
         <p className="text-lg font-semibold text-primary mb-3">{property.price}</p>
-        <p className="text-gray-600 text-sm mb-4 flex-grow">{property.description}</p>
+        <p className="text-gray-600 text-sm mb-4 flex-grow">{property.description.substring(0, 100)}...</p>
         <div className="flex justify-between items-center text-sm text-gray-700 pt-3 border-t border-gray-100">
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-2"><i className="fas fa-bed text-primary"></i>{property.beds} Beds</span>
@@ -72,6 +76,9 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
             <button onClick={handleShare} className="flex items-center gap-1.5 text-secondary hover:text-primary transition-colors font-medium">
               <i className="fas fa-share-alt"></i> Share
             </button>
+            <Link to={`/property/${property.id}`} className="flex items-center gap-1.5 text-dark-light hover:text-primary transition-colors font-medium" aria-label="View property details">
+                <i className="fas fa-eye"></i> View
+            </Link>
           </div>
         </div>
       </div>
