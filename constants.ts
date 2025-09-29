@@ -78,7 +78,13 @@ export const PROPERTIES: Property[] = [
       'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/1cdaac393a5f44cd848b18cfa6c10947.jpg',
       'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/6e8a37af915248458d821f57643797b7.jpg',
       'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/74810e5bff1f4aac95a21ff9d49e68cb.jpg',
-      'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/ac0991f6e43e4a7089d84cb7ee2a458b.jpg'
+      'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/ac0991f6e43e4a7089d84cb7ee2a458b.jpg',
+      'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/bed1.jpg',
+      'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/kitchen.jpg',
+      'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/living1.jpg',
+      'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/wash1.jpg',
+      'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/living2.jpg',
+      'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/masterplan.jpg'
       ],
     status: PropertyStatus.ForSale,
     amenities: ['Main Road Facing', 'Vallaya Home Interiors (Luxury Redefined)', '3 Side open plot', 'gym','landscaped gardens','parking'],
@@ -98,8 +104,14 @@ export const PROPERTIES: Property[] = [
       'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/1cdaac393a5f44cd848b18cfa6c10947.jpg',
       'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/6e8a37af915248458d821f57643797b7.jpg',
       'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/74810e5bff1f4aac95a21ff9d49e68cb.jpg',
-      'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/ac0991f6e43e4a7089d84cb7ee2a458b.jpg'
-      ],   
+      'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/ac0991f6e43e4a7089d84cb7ee2a458b.jpg',
+      'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/bed1.jpg',
+      'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/kitchen.jpg',
+      'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/living1.jpg',
+      'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/wash1.jpg',
+      'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/living2.jpg',
+      'https://raw.githubusercontent.com/SatvickMalhotra/9-property-wala/main/Pictures/RG%20Mirage/masterplan.jpg'
+      ], 
     status: PropertyStatus.ForSale,
     amenities: ['Main Road Facing', 'Vallaya Home Interiors (Luxury Redefined)', '3 Side open plot', 'gym','landscaped gardens','parking'],
     address: 'RG Mirage GH-1002, RG Residency, Sector 120, Noida, Uttar Pradesh 201307',
